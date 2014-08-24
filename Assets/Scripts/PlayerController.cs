@@ -5,6 +5,9 @@ public class PlayerController : MonoBehaviour {
 	
 	public float maxSpeed = 10f;
 	public float jumpForce = 1000f;
+	bool jetpack = false;
+
+	Animator animator;
 
 	bool facingRight = true;
 
@@ -13,21 +16,15 @@ public class PlayerController : MonoBehaviour {
 
 	void Start() {
 		Physics2D.gravity = new Vector2 (0, gravity);
+
+		animator = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		float sideMotion = Input.GetAxis ("Horizontal");
-		bool jetpack = Input.GetButtonDown("Jump");
+		jetpack = (Input.GetButtonDown("Jump") || Input.GetButtonDown("Fire1"));
 		Vector2 pos = transform.position;
-
-		if (jetpack && lowerGround) {
-			rigidbody2D.AddForce (Vector3.up * jumpForce);
-		}
-		else if (jetpack && !lowerGround) {
-			rigidbody2D.AddForce (Vector3.up * -jumpForce);	
-		}
-
 
 		pos.x += sideMotion * Time.deltaTime * maxSpeed;
 		transform.position = pos;
@@ -43,6 +40,17 @@ public class PlayerController : MonoBehaviour {
 			gravity = -gravity;
 			Physics2D.gravity = new Vector2 (0, gravity);
 			verticalFlip();
+		}
+
+		if (jetpack && lowerGround) {
+			rigidbody2D.AddForce (Vector3.up * jumpForce);
+			animator.SetTrigger("Jump");
+			jetpack = false;
+		}
+		else if (jetpack && !lowerGround) {
+			rigidbody2D.AddForce (Vector3.up * -jumpForce);
+			animator.SetTrigger("Jump");
+			jetpack = false;
 		}
 
 	}
