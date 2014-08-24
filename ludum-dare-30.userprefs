@@ -1,9 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SpaceTracking.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayerController.cs">
     <Files>
-      <File FileName="Assets\Scripts\ShipController.cs" Line="6" Column="9" />
-      <File FileName="Assets\Scripts\SpaceTracking.cs" Line="14" Column="1" />
+      <File FileName="Assets\Scripts\PlayerController.cs" Line="28" Column="40" />
+      <File FileName="Assets\Scripts\PlayerController.cs" Line="70" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
