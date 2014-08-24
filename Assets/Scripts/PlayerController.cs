@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PlayerController : MonoBehaviour {
 	
@@ -15,10 +16,19 @@ public class PlayerController : MonoBehaviour {
 	bool lowerGround = true;
 	float gravity = -30f;
 
+	List<string> killers = new List<string>();
+
 	void Start() {
 		Physics2D.gravity = new Vector2 (0, gravity);
 
 		animator = GetComponent<Animator>();
+
+		// Define things that kill you
+		killers.Add ("LowPlatform");
+		killers.Add ("HighPlatform");
+		killers.Add ("Small Spikes");
+		killers.Add ("Large Spikes");
+		killers.Add ("Bottomless Pit");
 	}
 	
 	// Update is called once per frame
@@ -79,9 +89,11 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D collision){
-		if (collision.gameObject.name == "LowPlatform" || collision.gameObject.name == "HighPlatform") {
-				animator.SetTrigger ("PlayerDead");
-				dead = true;
+		foreach (string killer in killers) {
+			if (collision.gameObject.name == killer) {
+					animator.SetTrigger ("PlayerDead");
+					dead = true;
+			}
 		}
 	}
 

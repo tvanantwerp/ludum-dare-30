@@ -3,12 +3,12 @@ guid: 31a4a49c5ea299744adaf39fd6e86f9c
 TextureImporter:
   fileIDToRecycleName:
     21300000: ground02
-    21300002: ground02_0
-    21300004: ground02_1
-    21300006: ground02_2
-    21300008: ground02_3
-    21300010: ground02_4
-    21300012: ground02_5
+    21300002: Slanted Ground
+    21300004: Ground Fill
+    21300006: Platform Body
+    21300008: Platform Edge
+    21300010: Small Spikes
+    21300012: Large Spikes
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -31,7 +31,7 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
+    filterMode: 1
     aniso: 1
     mipBias: -1
     wrapMode: 1
@@ -50,7 +50,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: ground02_0
+    - name: Slanted Ground
       rect:
         serializedVersion: 2
         x: 0
@@ -58,9 +58,9 @@ TextureImporter:
         width: 1053
         height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: ground02_1
+    - name: Ground Fill
       rect:
         serializedVersion: 2
         x: 1291
@@ -68,9 +68,9 @@ TextureImporter:
         width: 756
         height: 1022
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: ground02_2
+    - name: Platform Body
       rect:
         serializedVersion: 2
         x: 29
@@ -78,9 +78,9 @@ TextureImporter:
         width: 1024
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: ground02_3
+    - name: Platform Edge
       rect:
         serializedVersion: 2
         x: 1077
@@ -88,9 +88,9 @@ TextureImporter:
         width: 128
         height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: ground02_4
+    - name: Small Spikes
       rect:
         serializedVersion: 2
         x: 29
@@ -98,9 +98,9 @@ TextureImporter:
         width: 1024
         height: 583
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: ground02_5
+    - name: Large Spikes
       rect:
         serializedVersion: 2
         x: 0
@@ -108,7 +108,7 @@ TextureImporter:
         width: 2048
         height: 607
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
