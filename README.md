@@ -2,7 +2,7 @@
 
 This game is my first entry to [Ludum Dare](http://www.ludumdare.com/compo/) and my first attempt at video game development. It is the product of two weeks of intensely studying Unity3D.
 
-In this game, you play a spaceman who hovers around in the space between two parallel alien worlds. You can fire your jetpack to gain altitude, or switch between being affected by the gravity of the lower planet or the upper planet. By jumping and choosing which gravitational force influences you carefully, you can navigate the world and not impale yourself on the spikey terrain.
+In this game, you play as a spaceman who hovers around in the space between two parallel alien worlds. You can fire your jetpack to gain altitude, or switch between being affected by the gravity of the lower planet or the upper planet. By jumping and choosing which gravitational force influences you carefully, you can navigate the world and not impale yourself on the spikey terrain.
 
 ## Thanks and Inspiration
 
