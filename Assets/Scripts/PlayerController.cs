@@ -110,9 +110,9 @@ public class PlayerController : MonoBehaviour {
 			if(GUI.Button(new Rect(Screen.width/2 - 50, Screen.height/2 + 50, 100, 50), "Restart", menuButtons)){
 				SceneManager.LoadScene("intro", LoadSceneMode.Single);
 			}
-			if(GUI.Button(new Rect(Screen.width/2 - 50, Screen.height/2 + 100, 100, 50), "Quit", menuButtons)){
-				Application.Quit();
-			}
+			// if(GUI.Button(new Rect(Screen.width/2 - 50, Screen.height/2 + 100, 100, 50), "Quit", menuButtons)){
+			// 	Application.Quit();
+			// }
 		}
 	}
 	
