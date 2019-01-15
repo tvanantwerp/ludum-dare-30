@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -50,24 +51,24 @@ public class PlayerController : MonoBehaviour {
 			} else if (sideMotion < 0 && facingRight) {
 					horizontalFlip ();
 			}
-		}
-	}
-
-	void FixedUpdate() {
-		if (!dead) {
 
 			if (Input.GetButtonDown ("Fire2")) {
 					gravity = -gravity;
 					Physics2D.gravity = new Vector2 (0, gravity);
 					verticalFlip ();
 			}
+		}
+	}
+
+	void FixedUpdate() {
+		if (!dead) {
 
 			if (jetpack && lowerGround) {
-					rigidbody2D.AddForce (Vector3.up * jumpForce);
+					GetComponent<Rigidbody2D>().AddForce (Vector3.up * jumpForce);
 					animator.SetTrigger ("Jump");
 					jetpack = false;
 			} else if (jetpack && !lowerGround) {
-					rigidbody2D.AddForce (Vector3.up * -jumpForce);
+					GetComponent<Rigidbody2D>().AddForce (Vector3.up * -jumpForce);
 					animator.SetTrigger ("Jump");
 					jetpack = false;
 			}
@@ -107,7 +108,7 @@ public class PlayerController : MonoBehaviour {
 	void OnGUI(){
 		if (dead || win) {
 			if(GUI.Button(new Rect(Screen.width/2 - 50, Screen.height/2 + 50, 100, 50), "Restart", menuButtons)){
-				Application.LoadLevel (Application.loadedLevel);
+				SceneManager.LoadScene("intro", LoadSceneMode.Single);
 			}
 			if(GUI.Button(new Rect(Screen.width/2 - 50, Screen.height/2 + 100, 100, 50), "Quit", menuButtons)){
 				Application.Quit();
